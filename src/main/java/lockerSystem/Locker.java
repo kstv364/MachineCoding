@@ -1,9 +1,9 @@
 package lockerSystem;
 
 public class Locker {
-    private String lockerId;
+    private final String lockerId;
 
-    private Size size;
+    private final Size size;
     private boolean isOccupied;
     private String packageId;
 
