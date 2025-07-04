@@ -24,7 +24,7 @@ public class LockerManager {
 
         for(Size size : Size.values()) {
             if (size.ordinal() >= pkg.getSize().ordinal()) {
-                Queue<Locker> lockers = availableLockers.get(size);
+                Queue<Locker> lockers = new LinkedList<>(availableLockers.get(size));
                 while (!lockers.isEmpty()) {
                     Locker locker = lockers.poll();
                     if (locker != null && !locker.isOccupied()) {
